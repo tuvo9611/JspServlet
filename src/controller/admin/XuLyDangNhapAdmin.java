@@ -37,6 +37,7 @@ public class XuLyDangNhapAdmin extends HttpServlet {
 		
 		if (action.equals("dangnhap")) {
 
+			
 			if (nameAdminFromClient.equals(nameAdmin) && passAdminFromClient.equals(passAdmin)) {
 				ss.setAttribute("admin", nameAdmin);
 				response.sendRedirect(request.getContextPath() + urlIndex);
@@ -47,6 +48,7 @@ public class XuLyDangNhapAdmin extends HttpServlet {
 
 		} else if (action.equals("dangxuat")) {
 			ss.invalidate();
+			
 			response.sendRedirect(request.getContextPath() + "/admin/login.jsp");
 		}
 	}
